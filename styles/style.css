@@ -16,9 +16,9 @@ header#main-header{
 	margin-bottom: 5px;
 	display: flex;
 	justify-content: space-between;
-	background-color: #f7f7f7;
-	color:steelblue;
-	height: 5.5rem;
+	background-color: #24292e;
+	color:white;
+	height: 2rem;
 }
 #main-nav{
 	justify-content: flex-start;
@@ -42,7 +42,7 @@ header#main-header{
 
 .logo{
     font: bold 2em 'Rubik Mono One', sans-serif;
-    color: tomato;
+    color: white;
     padding-left: 0;
 	text-decoration: none;
 }
@@ -94,10 +94,11 @@ header#main-header{
 .sidebar{
 	display: block;
 	flex:1;	
+	padding: 1em;
 }
 /*character item container properties*/
 #character-container{
-	flex:7;
+	flex:6;
 	margin: auto 20px auto 20px;
 }
 /*character item properties*/
@@ -120,7 +121,6 @@ header#main-header{
 .character-details{
 	width:auto;
 	display: grid;
-	grid-gap: 1rem;
 }
 .character-details > *{
 	display: block;
@@ -147,7 +147,7 @@ header#main-header{
 }
 /*Footer properties*/
 #nav-footer{
-	background-color: #f7f7f7;
+	background-color: #24292e;
 	align-items: baseline;
 	display: flex;
 	bottom: 0;
@@ -157,42 +157,40 @@ header#main-header{
     justify-content: center;
     position: absolute;
 }
-#license{
-	margin: 0 auto;
-}
-p.footer-info-text{
-	font-size: 12px;
-	text-align: center;
-}
 /* details div properties */
-.details {
-	//display: none;
-}
 .details .character-poster{
 	height: auto;
 }
 .details .rating{
 	margin-left:10px;
 }
-
+.pagination, .pagination a {
+  color: black;
+  padding: 0.1em;
+  text-decoration: none;
+}
+.pagination a.active {
+  background-color: gray;
+  color: white;
+}
 /* media queries */
 @media only screen and (max-width: 900px) {
-	header#main-header{
-		flex-direction: column;
-		height: auto;
-	}
-	.sidebar{
-		display: none;
-	}
-	.character-grid {
-        display: block;
-		width: auto;
-	}
-	.character-poster{
-		height: auto;
-	}
-	#character-container {
-     	margin: auto;
-    }
+#main-content{
+	flex-direction: column;
+}
+header#main-header{
+	flex-direction: column;
+	height: auto;
+}
+.character-grid {
+    display: block;
+	width: auto;
+}
+.character-poster{
+	height: auto;
+}
+#character-container {
+    margin: auto;
+}
 }
 
