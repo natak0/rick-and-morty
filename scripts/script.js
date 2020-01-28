@@ -114,7 +114,7 @@ createDetails: function(image, name, species, location, gender){
 	characterPoster.className += "character-poster";
 	characterPoster.src = image;
 	var characterName = document.createElement("p");
-    characterName.className += "character-name";
+	characterName.className += "character-name";
 	var characterSpecies = document.createElement("p");
 	characterSpecies.className += "character-species"; 
 	var characterLocation =document.createElement("p"); 

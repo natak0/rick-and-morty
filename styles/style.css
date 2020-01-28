@@ -46,45 +46,6 @@ header#main-header{
     padding-left: 0;
 	text-decoration: none;
 }
-/*search*/
-.search-wrapper{
-	}
-#search-form{
-	display: inline-flex;
-   	border-radius: 4px;
-   	min-width: 300px;
-   	background-color: #fff;
-	border: 1px solid rgba(0,0,0,0.15);
-	box-shadow: 0 2px 3px rgba(0,0,0,0.06);
-	padding-left: 1em;
-	padding-right: 0;
-	font-size: 1.2em;
-	margin-bottom: 1em;
-}
-#search-input{
-	width: 100%;
-	background: none;
-    outline: none;
-    border: none;
-    padding: 0;
-}
-#search-btn{	
-	border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #aaa;
-    border-radius: 4px;
-    border-left: 1px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-    margin-left: 1em;
-    
-}
-#search-btn:hover{
-	color:#6d6d6d;
-	}
 /*main content layout and sidebar*/
 #main-content{
 	display: flex;	
@@ -127,23 +88,23 @@ header#main-header{
 	grid-column: 1;
 	text-align: left;
 	padding: 0 10px 0px 10px;
+	margin: 0 0.4em 0 0.4em;
 }
 .character-details > .character-link{
 	grid-row: 1/8;
 	grid-column: 1;
 }
-.character-title, .character-date, .character-director{
-	font-size: .8em;
-	margin-bottom: 0;
-}
-.character-desc{
-	font-size: .7em;
-	display: none;
-}
 .character-poster{
 	height: 200px;
 	margin-left: auto;
     margin-right: auto;
+}
+.character-details > .character-poster{
+	margin-bottom: 1em;
+}
+/* graph */
+.genderGraph{
+	margin-top: 1em;
 }
 /*Footer properties*/
 #nav-footer{
@@ -164,14 +125,24 @@ header#main-header{
 .details .rating{
 	margin-left:10px;
 }
-.pagination, .pagination a {
-  color: black;
+.pagination{
+	margin-left: 20px;
+}
+.pagination, .pagination a, .pagination span {
+  color: gray;
   padding: 0.1em;
+  display: inline-block;
   text-decoration: none;
 }
-.pagination a.active {
-  background-color: gray;
-  color: white;
+.pagination a:hover {
+  text-decoration: underline;
+  cursor:pointer;
+}
+.pagination span{
+	color:darkgray;
+}
+.pagination #home::after{
+	content: "	|"
 }
 /* media queries */
 @media only screen and (max-width: 900px) {
